@@ -20,6 +20,8 @@ using namespace std;
  *  low = mid + 1; if target is greater then we know our target is bigger than
  * middle value so we discard everything below mid. else high = mid - 1; else we
  * discard everything above mid index and set it as next high.
+ * at the end if nothing found we return low which will be the position where
+ * the target element can go in if exists.
  * */
 
 class Solution {
@@ -38,7 +40,7 @@ public:
         high = mid - 1;
       }
     }
-    return -1;
+    return low;
   }
 };
 
