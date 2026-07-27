@@ -1,10 +1,6 @@
-from typing import Tuple
-from typing import List
-
-
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagramMap: dict[Tuple[int, ...], List[str]] = {}
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        anagramMap: dict[tuple[int, ...], list[str]] = {}
         for s in strs:
             count = [0] * 26
             for c in s:

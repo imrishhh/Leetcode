@@ -1,11 +1,8 @@
-from typing import List
-
-
 class Solution:
-    def encode(self, strs: List[str]) -> str:
+    def encode(self, strs: list[str]) -> str:
         return "".join(f"{len(s)}#{s}" for s in strs)
 
-    def decode(self, s: str) -> List[str]:
+    def decode(self, s: str) -> list[str]:
         result: list[str] = []
         i: int = 0
         while i < len(s):

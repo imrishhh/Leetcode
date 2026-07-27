@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         if len(nums) < 2:
             return []
         complement_map: dict[int, int] = {}

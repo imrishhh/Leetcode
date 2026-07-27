@@ -1,13 +1,10 @@
-from typing import List
-
-
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
         rows = [set() for _ in range(9)]
         cols = [set() for _ in range(9)]
         subs = [set() for _ in range(9)]
-        for i in range(0, 9):
-            for j in range(0, 9):
+        for i in range(9):
+            for j in range(9):
                 val = board[i][j]
                 print(val)
                 if val == ".":

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         freq: dict[int, int] = {}
         for num in nums:
             freq[num] = freq.get(num, 0) + 1
@@ -11,7 +8,7 @@ class Solution:
         for num, count in freq.items():
             bucket[count].append(num)
 
-        res: List[int] = []
+        res: list[int] = []
         for i in range(max_freq, 0, -1):
             for num in bucket[i]:
                 res.append(num)
